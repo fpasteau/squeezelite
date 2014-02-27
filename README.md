@@ -15,7 +15,7 @@ The GUI is generated from the server and sent to the player as it's done for squ
 
 To compile :
 
-sudo apt-get install libasound2-dev libflac-dev libmad0-dev libvorbis-dev libfaad-dev libmpg123-dev liblircclient-dev libncurses5-dev
+	sudo apt-get install libasound2-dev libflac-dev libmad0-dev libvorbis-dev libfaad-dev libmpg123-dev liblircclient-dev libncurses5-dev
 
 	OPTS=-DINTERACTIVE make
 
