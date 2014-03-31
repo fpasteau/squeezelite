@@ -435,7 +435,7 @@ int main(int argc, char **argv) {
 			interactive.lircrc = optarg;
 			break;
 #ifndef __WIN32__
-		case 'C':
+		case 'i':
 			interactive.using_lirc = true;
 			break;
 		case 'L':
