@@ -252,7 +252,13 @@ int main(int argc, char **argv) {
 
 	while (optind < argc && strlen(argv[optind]) >= 2 && argv[optind][0] == '-') {
 		char *opt = argv[optind] + 1;
-		if (strstr("oabcdfmnNprs", opt) && optind < argc - 1) {
+		if (strstr("oabcdfmnNprs"
+#ifdef INTERACTIVE
+#ifndef __WIN32__
+						"F"
+#endif
+#endif
+						, opt) && optind < argc - 1) {
 			optarg = argv[optind + 1];
 			optind += 2;
 		} else if (strstr("ltz"
@@ -267,7 +273,7 @@ int main(int argc, char **argv) {
 #endif
 #ifdef INTERACTIVE
 #ifndef __WIN32__
-						  "LOiFE"
+						  "LOiE"
 #endif
 						  "Tw"
 #endif
